@@ -1,9 +1,19 @@
 const addButton = document.querySelector("#add");
 const inputText = document.querySelector("#text");
 let todos = document.querySelector(".todos");
-let allTodos = [];
+
+let allTodos;
+
+if(localStorage.getItem('allTodos')){
+  allTodos = JSON.parse(localStorage.getItem('allTodos'));
+} else {
+  allTodos = [];
+}
+
 
 function displayTodos() {
+  localStorage.setItem("allTodos", JSON.stringify(allTodos));
+
   if (allTodos.length == 0) {
     todos.innerHTML = "You don't have any tasks right now.";
     return false;
@@ -46,6 +56,7 @@ function displayTodos() {
       </div>
       `;
     }
+
   }
 
   div.innerHTML = htmlText;
