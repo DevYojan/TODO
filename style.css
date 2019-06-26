@@ -1,0 +1,79 @@
+body {
+  font-family: Helvetica, sans-serif;
+  background: #1a2980; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #26d0ce,
+    #1a2980
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #26d0ce,
+    #1a2980
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+  width: 60%;
+  margin: 60px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.todos {
+  margin-top: 10px;
+  padding: 1%;
+  background-color: rgb(253, 253, 253);
+  text-align: center;
+}
+
+.empty {
+  font-size: 1.5em;
+  color: lightgray;
+  font-style: italic;
+  display: none;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+#add {
+  padding: 0.5%;
+  font-size: 1.3em;
+}
+
+input::focus {
+  border: 0.8px solid rgb(178, 20, 240);
+}
+
+#add {
+  padding: 0.8%;
+}
+
+.delete {
+  color: rgb(160, 4, 4);
+}
+
+.completed{
+  color: green;
+}
+
+.no-event{
+  pointer-events: none;
+}
